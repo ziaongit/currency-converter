@@ -4,6 +4,7 @@ class CurrencyConverterPage extends StatefulWidget {
   const CurrencyConverterPage({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _CurrencyConverterPageState createState() => _CurrencyConverterPageState();
 }
 
@@ -36,7 +37,7 @@ class _CurrencyConverterPageState extends State<CurrencyConverterPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              '${result.toStringAsFixed(2)} SEK',
+              'SEK ${result.toStringAsFixed(2)}',
               style: const TextStyle(
                 fontSize: 45,
                 fontWeight: FontWeight.bold,
