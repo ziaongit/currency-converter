@@ -12,6 +12,18 @@ class _CurrencyConverterPageState extends State<CurrencyConverterPage> {
   double result = 0; // Declare result as a state variable
   final TextEditingController textEditingController = TextEditingController();
 
+  void convert() {
+    setState(() {
+      // Use tryParse to avoid crashes on invalid input
+      double? input = double.tryParse(textEditingController.text);
+      if (input != null) {
+        result = input * 10.5;
+      } else {
+        result = 0; // Handle invalid input gracefully
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final border = OutlineInputBorder(
@@ -67,17 +79,7 @@ class _CurrencyConverterPageState extends State<CurrencyConverterPage> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextButton(
-                onPressed: () {
-                  setState(() {
-                    // Use tryParse to avoid crashes on invalid input
-                    double? input = double.tryParse(textEditingController.text);
-                    if (input != null) {
-                      result = input * 10;
-                    } else {
-                      result = 0; // Handle invalid input gracefully
-                    }
-                  });
-                },
+                onPressed: convert,
                 style: TextButton.styleFrom(
                   minimumSize: const Size(double.infinity, 50),
                   backgroundColor: Colors.black,
