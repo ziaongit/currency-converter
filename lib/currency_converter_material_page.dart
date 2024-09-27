@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class CurrencyConverterPage extends StatefulWidget {
-  const CurrencyConverterPage({super.key});
+class CurrencyConverterMaterialPage extends StatefulWidget {
+  const CurrencyConverterMaterialPage({super.key});
 
   @override
   // ignore: library_private_types_in_public_api
-  _CurrencyConverterPageState createState() => _CurrencyConverterPageState();
+  _CurrencyConverterMaterialPageState createState() => _CurrencyConverterMaterialPageState();
 }
 
-class _CurrencyConverterPageState extends State<CurrencyConverterPage> {
+class _CurrencyConverterMaterialPageState extends State<CurrencyConverterMaterialPage> {
   double result = 0; // Declare result as a state variable
   final TextEditingController textEditingController = TextEditingController();
 
