@@ -36,7 +36,7 @@ class _CurrencyConverterPageState extends State<CurrencyConverterPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              result.toString(),
+              '${result.toStringAsFixed(2)} SEK',
               style: const TextStyle(
                 fontSize: 45,
                 fontWeight: FontWeight.bold,
